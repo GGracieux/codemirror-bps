@@ -1,0 +1,11 @@
+{
+  "name": "codemirror-bps",
+  "version": "0.1.0",
+  "description": "Breizh bagpipe notation mode for code mirror",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ggracieux@gmail.com",
+  "license": "ISC"
+}
