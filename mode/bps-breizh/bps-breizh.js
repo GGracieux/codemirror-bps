@@ -218,6 +218,7 @@ CodeMirror.defineSimpleMode("bps-breizh", {
 
   start: [
 		{token: "uservar", regex: /[ \t]*(#titre|#titre2|#titreGauche|#titreDroite|#piedPage|#tempo|#clef|#language|#tonalite)[ \t]*=[ \t]*.*$/ },		
+		{token: "commentaire", regex: /\%(.*)*$/},
 		{token: "annotation", regex: /\"\S\"/},
 		{token: "ornement", regex: /\((si|la|sol|fa|mi|re|do|SI|LA)(,si|,la|,sol|,fa|,mi|,re|,do|,SI|,LA)*\)/ },		
 		{token: "tempo", regex: /\[[0-9]*\/[0-9]*\]/ },		
