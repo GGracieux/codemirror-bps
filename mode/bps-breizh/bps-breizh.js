@@ -219,7 +219,7 @@ CodeMirror.defineSimpleMode("bps-breizh", {
   start: [
 		{token: "uservar", regex: /[ \t]*(#titre|#titre2|#titreGauche|#titreDroite|#piedPage|#tempo|#clef|#language|#tonalite|#indenterPremiere|#etirerDerniere|#orientation)[ \t]*=[ \t]*.*$/ },		
 		{token: "commentaire", regex: /\%(.*)*$/},
-		{token: "annotation", regex: /\"\S\"/},
+		{regex: /\"/, token: "annotation", next: "annotation"},
 		{token: "ornement", regex: /\((si|la|sol|fa|mi|re|do|SI|LA)(,si|,la|,sol|,fa|,mi|,re|,do|,SI|,LA)*\)/ },		
 		{token: "tempo", regex: /\[[0-9]*\/[0-9]*\]/ },		
 		{token: "note", regex: /(si|la|sol|fa|mi|re|do|SI|LA)(0|2|4|8|16|32|64){0,1}(\.)*/ },		
@@ -230,10 +230,14 @@ CodeMirror.defineSimpleMode("bps-breizh", {
 		{token: "endBlock", regex: /}/},
 		{token: "anacrouse", regex: /@([0-9]){1,3}/},
 		{token: "silence", regex: /\=/},
-		{token: "altBlock", regex: /\A\{/},
-		
+		{token: "altBlock", regex: /\A\{/},		
 		{token: "nolet", regex: /N[0-9]*\/[0-9]*\{/}		
-  ]
+  ],
+
+  annotation: [
+	{regex: /.*?\"/, token: "annotation", next: "start"},
+    {regex: /.*/, token: "annotation"}
+  ],  
 });
 
 
