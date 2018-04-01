@@ -222,7 +222,7 @@ CodeMirror.defineSimpleMode("bps-breizh", {
 		{regex: /\"/, token: "annotation", next: "annotation"},
 		{token: "ornement", regex: /\((si|la|sol|fa|mi|re|do|SI|LA)(,si|,la|,sol|,fa|,mi|,re|,do|,SI|,LA)*\)/ },		
 		{token: "tempo", regex: /\[[0-9]*\/[0-9]*\]/ },		
-		{token: "note", regex: /(si|la|sol|fa|mi|re|do|SI|LA)(1|2|4|8|16|32|64){0,1}(\.)*/ },		
+		{token: "note", regex: /(si|la|sol|fa|mi|re|do|SI|LA)(16|2|4|8|1|32|64){0,1}(\.)*/ },		
 		{token: "liaison", regex: /-/},
 		{token: "linebreak", regex: /\|/},	
 		{token: "repeatBlock", regex: /\R([0-9]){0,}\{/},	
