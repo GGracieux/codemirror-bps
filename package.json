@@ -1,6 +1,6 @@
 {
   "name": "codemirror-bps",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Breizh bagpipe notation mode for code mirror",
   "main": "index.js",
   "scripts": {
