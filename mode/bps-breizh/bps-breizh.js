@@ -235,7 +235,7 @@ CodeMirror.defineSimpleMode("bps-breizh", {
 		{token: "repeatBlock", regex: /\R([0-9]){0,}\{/},	
 		{token: "beginBlock", regex: /{/},		
 		{token: "endBlock", regex: /}/},
-		{token: "anacrouse", regex: /@([0-9]){1,3}/},
+		{token: "anacrouse", regex: /@([0-9]){1,3}[\.]{0,1}/},
 		{token: "silence", regex: /\=/},
 		{token: "altBlock", regex: /\A\{/},		
 		{token: "nolet", regex: /N[0-9]+\/[0-9]+\{/}		
