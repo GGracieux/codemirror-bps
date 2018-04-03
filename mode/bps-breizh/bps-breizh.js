@@ -217,15 +217,20 @@
 CodeMirror.defineSimpleMode("bps-breizh", {
 
   start: [
-		{token: "uservar", regex: /[ \t]*(#titre|#titre2|#titreGauche|#titreDroite|#piedPage|#tempo|#clef|#language|#tonalite|#indenterPremiere|#etirerDerniere|#orientation)[ \t]*=[ \t]*.*$/ },		
+		{token: "uservar", regex: /[ \t]*(#titre|#titre2|#titreGauche|#titreDroite|#piedPage)[ \t]*=[ \t]*.*$/ },	
+		{token: "uservar", regex: /[ \t]*(#indenterPremiere|#etirerDerniere)[ \t]*=[ \t]*(oui|non)[ \t]*$/ },	
+		{token: "uservar", regex: /[ \t]*#orientation[ \t]*=[ \t]*(portrait|paysage)[ \t]*$/ },	
+		{token: "uservar", regex: /[ \t]*#tempo[ \t]*=[ \t]*[0-9]+[ \t]*$/ },	
+		{token: "uservar", regex: /[ \t]*#clef[ \t]*=[ \t]*(G|C|F)[ \t]*$/ },
+		{token: "uservar", regex: /[ \t]*#tonalite[ \t]*=[ \t]*(dobM|solbM|rebM|labM|mibM|sibM|faM|doM|solM|reM|laM|miM|siM|fadM|dodM)[ \t]*$/ },		
 		{token: "commentaire", regex: /\%(.*)*$/},
 		{regex: /\"/, token: "annotation", next: "annotation"},
 		{token: "ornement", regex: /\((si|la|sol|fa|mi|re|do|SI|LA)(,si|,la|,sol|,fa|,mi|,re|,do|,SI|,LA)*\)/ },		
 		{token: "tempo", regex: /\[[0-9]*\/[0-9]*\]/ },		
 		{token: "note", regex: /(si|la|sol|fa|mi|re|do|SI|LA)(16|2|4|8|1|32|64){0,1}(\.)*/ },		
-    {token: "scoreSep", regex: /-{4,}/},
+		{token: "scoreSep", regex: /-{4,}/},
 		{token: "liaison", regex: /-/},
-    {token: "pagebreak", regex: /\|\|/},
+		{token: "pagebreak", regex: /\|\|/},
 		{token: "linebreak", regex: /\|/},	
 		{token: "repeatBlock", regex: /\R([0-9]){0,}\{/},	
 		{token: "beginBlock", regex: /{/},		
@@ -241,7 +246,6 @@ CodeMirror.defineSimpleMode("bps-breizh", {
     {regex: /.*/, token: "annotation"}
   ],  
 });
-
 
 CodeMirror.defineMIME("text/bps-breizh", "bps-breizh");
 
