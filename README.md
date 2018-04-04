@@ -1,2 +1,2 @@
 # codemirror-bps
-Breizh bagpipe notation mode for code mirror
+Code mirror mode for simplified bagpipe score notation.
