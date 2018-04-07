@@ -1,7 +1,7 @@
 {
   "name": "codemirror-bps",
-  "version": "1.0.1",
-  "description": "Breizh bagpipe notation mode for code mirror",
+  "version": "1.0.2",
+  "description": "Bagpipe score notation mode for code mirror",
   "main": "index.js",
   "scripts": {
     "test": "echo \"No test specified\" && exit 1"
